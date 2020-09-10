@@ -1,0 +1,211 @@
+/* Body */
+body {
+  margin-top: 45px;
+}
+
+.navbar {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff !important;
+}
+
+/* Navbar */
+.navbar-brand {
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #0B6E8F !important;
+}
+
+.nav-link {
+  color: #000 !important;
+}
+
+.nav-link.active {
+  color: #0B6E8F !important;
+  font-weight: 700;
+}
+
+.nav-link:hover {
+  color: #0B6E8F !important;
+}
+
+/* Jumbotron */
+
+.jumbotron {
+  font-family: 'Poppins', sans-serif;
+  color: #000;
+  background-image: url(../img/slideshow/pp.png);
+  background-size: cover;
+  height: 450px;
+  margin-top: -40px;
+}
+
+.jumbotron .display-4 {
+  font-size: 39px;
+}
+
+.jumbotron .display-3 {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.jumbotron .lead {
+  font-size: 31px;
+}
+
+.jumbotron img {
+  float: right;
+  width: 288px;
+}
+
+
+/* Tombol */
+.tombol-biru {
+  background-color: #0B6E8F;
+  color: #fff;
+}
+
+.tombol-biru:hover {
+  background-color: #fff;
+  border: 2px solid #0B6E8F;
+  color: #000;
+}
+
+.tombol-putih {
+  border: 2px solid #0B6E8F;
+}
+
+.tombol-putih:hover {
+  background-color: #0B6E8F;
+  color: #fff;
+}
+
+/* Social */
+.social a {
+  color: #0B6E8F;
+}
+
+.social a:hover {
+  color: #094d64;
+  transition: 0.3s;
+}
+
+
+/* Tools, Portfolio */
+section.work {
+  background-image: url('../img/banner/4.jpeg');
+  background-attachment: fixed;
+  background-position-y: bottom;
+}
+
+section.portfolio {
+  background-image: url('../img/banner/4.jpeg');
+  background-attachment: fixed;
+  background-position-y: 55em;
+
+}
+
+.tools h3,
+.work h3,
+.portfolio h3 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+#work .card {
+  -webkit-box-shadow: -1px 2px 41px -8px rgba(0, 0, 0, 0.33);
+  -moz-box-shadow: -1px 2px 41px -8px rgba(0, 0, 0, 0.33);
+  box-shadow: -1px 2px 41px -8px rgba(0, 0, 0, 0.33);
+}
+
+.tools img {
+  width: 27%;
+  transition: all .2s ease-in-out;
+  padding: 20px;
+  border-radius: 10px;
+  -webkit-box-shadow: -1px 2px 41px -8px rgba(0, 0, 0, 0.33);
+  -moz-box-shadow: -1px 2px 41px -8px rgba(0, 0, 0, 0.33);
+  box-shadow: -1px 2px 41px -8px rgba(0, 0, 0, 0.33);
+}
+
+.tools img:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.work .card {
+  font-family: 'Roboto', sans-serif;
+}
+
+.portfolio .card {
+  font-family: 'Roboto', sans-serif;
+  -webkit-box-shadow: -1px 2px 41px -8px rgba(0, 0, 0, 0.33);
+  -moz-box-shadow: -1px 2px 41px -8px rgba(0, 0, 0, 0.33);
+  box-shadow: -1px 2px 41px -8px rgba(0, 0, 0, 0.33);
+}
+
+.portfolio .card-title {
+  font-weight: 700;
+}
+
+.sertifikat img:hover {
+  -webkit-box-shadow: -1px 2px 41px -8px rgba(0, 0, 0, 0.33);
+  -moz-box-shadow: -1px 2px 41px -8px rgba(0, 0, 0, 0.33);
+  box-shadow: -1px 2px 41px -8px rgba(0, 0, 0, 0.33);
+}
+
+footer {
+  background-color: #0B6E8F;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  font-size: 18px;
+}
+
+footer span {
+  font-weight: bold;
+}
+
+footer a{
+    color: white;
+}
+
+footer a:hover{
+    color: #ccc;
+}
+
+/* Desktop Version */
+@media (min-width: 992px) {
+  body {
+    margin-top: 75px;
+  }
+
+  .nav-link {
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+
+  .jumbotron {
+    margin-top: -75px;
+    height: 642px;
+  }
+
+  .jumbotron .display-4 {
+    font-size: 50px;
+    color: #fff;
+  }
+
+  .jumbotron .display-3 {
+    font-size: 50px;
+    color: #fff;
+  }
+
+  .jumbotron .lead {
+    font-size: 37px;
+    color: #fff;
+  }
+
+  .tools img {
+    width: 60%;
+  }
+
+}
