@@ -1,3 +1,3 @@
 # rizkikurniaa.github.io
 
-Web Portofolio
+Web Portofolio Aplikasi
