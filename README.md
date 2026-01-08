@@ -1,6 +1,6 @@
 # Rizki Kurniawan's Portfolio Website
 
-![Portfolio Preview](assets/images/preview.png)
+![Portfolio Preview](assets/images/general/preview.png)
 
 Welcome to the source code of my personal portfolio website. This static website serves as a showcase for my projects, skills, and professional experience as a **Mobile & Backend Engineer**.
 
