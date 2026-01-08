@@ -1,467 +1,605 @@
 <!DOCTYPE html>
-<html lang="en" id="home">
+<html lang="en" class="scroll-smooth">
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Portfolio of a Mobile & Web Developer specializing in Android (XML, Compose, KMP), Laravel, and CodeIgniter.">
+    <title>Rizki Kurniawan | Mobile & Backend Engineer</title>
 
-  <!-- Required meta tags -->
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="assets/libs/bootstrap/css/bootstrap.min.css" />
-
-  <!-- Font Awesome CSS -->
-  <link rel="stylesheet" href="assets/libs/fontawesome/css/all.css" />
-
-  <!-- Animate CSS -->
-  <link rel="stylesheet" href="assets/libs/animate.css" />
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Roboto:400,700&display=swap" rel="stylesheet" />
-
-  <!-- My CSS -->
-  <link rel="stylesheet" href="assets/css/style.css" />
-
-  <title>Rizki Kurniawan</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-    <div class="container">
-      <a class="navbar-brand page-scrool" href="#home">Rizki Kurniawan</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav ml-auto">
-          <a class="nav-item page-scrool nav-link active" href="#home">Home</a>
-          <a class="nav-item page-scrool nav-link" href="#work">Pengalaman Kerja</a>
-          <a class="nav-item page-scrool nav-link" href="#portfolio">Portfolio</a>
-        </div>
-      </div>
-    </div>
-  </nav>
-  <!-- Akhir Navbar -->
 
-  <!-- Jumbotron -->
-  <div class="jumbotron jumbotron-fluid">
-    <div class="container">
-      <div class="row pt-5">
-        <div class="col-12 col-md-6 col-lg-6 d-flex">
-          <div class="text-caption align-self-center">
-            <h1 class="display-4 mt-5">HI....</h1>
-            <h1 class="display-3">I'M RIZKI KURNIAWAN</h1>
-            <p class="lead">Android Developer</p>
-            <div class="tombol">
-              <div class="row">
-                <div class="col-12 col-lg-4 mb-2">
-                  <a href="#" class="btn tombol-biru btn-block">ABOUT ME</a>
+    <!-- Background Canvas -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">Rizki<span class="highlight"> Kurniawan</span></a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <p class="greeting">Hello, I'm</p>
+                <h1 class="name">Rizki Kurniawan</h1>
+                <h2 class="role-text">I build <span class="typing-text"></span></h2>
+                <p class="summary">
+                    Versatile Developer building modern mobile apps with <strong>Kotlin, Jetpack Compose &
+                        Multiplatform</strong>,
+                    and robust web solutions using <strong>Laravel & CodeIgniter</strong>.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#" class="btn btn-outline">Download CV <i class="fas fa-download"></i></a>
                 </div>
-                <div class="col-12 col-lg-4">
-                  <a href="#" class="btn tombol-putih btn-block">GET CV</a>
+            </div>
+            <div class="hero-image-container">
+                <div class="hero-blob"></div>
+                <img src="assets/images/general/profile.jpeg" alt="Profile" class="hero-img">
+            </div>
+        </div>
+        <a href="#about" class="scroll-down">
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About <span class="highlight">Me</span></h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I am a dedicated software engineer with deep expertise in the Android ecosystem.
+                        I build modern, responsive apps using <strong>Kotlin XML</strong>, <strong>Jetpack
+                            Compose</strong>,
+                        and <strong>Compose Multiplatform</strong> for cross-platform reach.
+                    </p>
+                    <p>
+                        On the web, I specialize in PHP frameworks, creating secure and scalable backends with
+                        <strong>Laravel</strong> and <strong>CodeIgniter</strong>. I love bridging mobile UIs with
+                        robust server-side APIs.
+                    </p>
+                    <div class="tech-badges">
+                        <span class="badge"><i class="fab fa-android"></i> Jetpack Compose</span>
+                        <span class="badge"><i class="fas fa-mobile-alt"></i> KMP</span>
+                        <span class="badge"><i class="fab fa-laravel"></i> Laravel</span>
+                        <span class="badge"><i class="fab fa-php"></i> CodeIgniter</span>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
         </div>
-        <div class="col-6 d-none d-md-block">
-          <!-- <img src="assets/img/slideshow/foto.png" alt="" /> -->
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Featured <span class="highlight">Projects</span></h2>
+
+            <!-- Mobile Projects -->
+            <h3 class="subsection-title"><i class="fas fa-mobile-alt"></i> Mobile Development</h3>
+            <div class="projects-grid">
+                <!-- Project 10 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="assets/images/portfolio/mobile/daily-market.png" alt="Daily market ISS">
+                        <div class="project-overlay">
+                            <a href="#" class="btn-icon"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="btn-icon"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Daily market ISS</h3>
+                        <p>A B2B ordering application streamlining product procurement for outlets from PT Inti Sukses
+                            Sumatera distributors.</p>
+                        <div class="tags">
+                            <span>Kotlin</span>
+                            <span>MySQL</span>
+                            <span>Rest API</span>
+                            <span>Google Maps API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="link-text">View Details <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+                <!-- Project 9 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="assets/images/portfolio/mobile/iss-apps.png" alt="ISS : Distribution System">
+                        <div class="project-overlay">
+                            <a href="#" class="btn-icon"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="btn-icon"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>ISS : Distribution System</h3>
+                        <p>A comprehensive sales distribution system empowering sales representatives at PT Inti Sukses
+                            Sumatera to manage orders and inventory efficiently.</p>
+                        <div class="tags">
+                            <span>Kotlin</span>
+                            <span>MySQL</span>
+                            <span>Rest API</span>
+                            <span>Google Maps API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="link-text">View Details <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+                <!-- Project 8 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="assets/images/portfolio/mobile/ayohijrah.png" alt="Ayohijrah">
+                        <div class="project-overlay">
+                            <a href="#" class="btn-icon"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="btn-icon"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Ayo Hijrah</h3>
+                        <p>A dedicated e-commerce platform designed for Ayo Hijrah, facilitating the retail of Muslim
+                            fashion with a seamless shopping experience.</p>
+                        <div class="tags">
+                            <span>Java</span>
+                            <span>MySQL</span>
+                            <span>Rest API</span>
+                            <span>Rajaongkir API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="link-text">View Details <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+                <!-- Project 7 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="assets/images/portfolio/mobile/absensi.png" alt="Absensi App">
+                        <div class="project-overlay">
+                            <a href="#" class="btn-icon"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="btn-icon"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Absensi Mobile</h3>
+                        <p>An efficient employee attendance application featuring real-time location tracking and
+                            automated data recapitulation for precise workforce management.</p>
+                        <div class="tags">
+                            <span>Java</span>
+                            <span>MySQL</span>
+                            <span>Rest API</span>
+                            <span>Google Maps API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="link-text">View Details <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+                <!-- Project 6 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="assets/images/portfolio/mobile/diata.png" alt="Diata">
+                        <div class="project-overlay">
+                            <a href="#" class="btn-icon"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="btn-icon"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Diata : Point of Sale</h3>
+                        <p>A mobile Point of Sale (POS) solution enabling business owners to manage transactions and
+                            inventory directly from their smartphones.</p>
+                        <div class="tags">
+                            <span>Java</span>
+                            <span>MySQL</span>
+                            <span>Rest API</span>
+                            <span>Firebase Cloud Messaging</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="link-text">View Details <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+                <!-- Project 5 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="assets/images/portfolio/mobile/bpcb.png" alt="BPBC">
+                        <div class="project-overlay">
+                            <a href="#" class="btn-icon"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="btn-icon"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>BPCB Sumbar</h3>
+                        <p>A cultural heritage information app utilizing QR codes to provide instant access to
+                            historical data on protected sites in West Sumatra.</p>
+                        <div class="tags">
+                            <span>Java</span>
+                            <span>MySQL</span>
+                            <span>Rest API</span>
+                            <span>QR Code</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="link-text">View Details <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+                <!-- Project 4 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="assets/images/portfolio/mobile/alumniubh.png" alt="Alumni UBH">
+                        <div class="project-overlay">
+                            <a href="#" class="btn-icon"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="btn-icon"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Alumni Hukum UBH</h3>
+                        <p>The official alumni networking application for the Faculty of Law at Bung Hatta University,
+                            fostering community and professional connections.</p>
+                        <div class="tags">
+                            <span>Java</span>
+                            <span>MySQL</span>
+                            <span>Rest API</span>
+                            <span>Google Maps API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="link-text">View Details <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+                <!-- Project 3 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="assets/images/portfolio/mobile/pinzy.png" alt="Pinzy">
+                        <div class="project-overlay">
+                            <a href="#" class="btn-icon"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="btn-icon"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Pinzy</h3>
+                        <p>A specialized B2B e-commerce platform for smartphone accessory transactions, serving
+                            distributors across West Sumatra and Bengkulu.</p>
+                        <div class="tags">
+                            <span>Java</span>
+                            <span>MySQL</span>
+                            <span>Rest API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="link-text">View Details <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+                <!-- Project 2 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="assets/images/portfolio/mobile/mediatama.png" alt="Mediatama">
+                        <div class="project-overlay">
+                            <a href="#" class="btn-icon"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="btn-icon"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Mediatama Apps</h3>
+                        <p>A scheduling and consultation booking application connecting clients with educational
+                            consultants at CV Mediatama Web Indonesia.</p>
+                        <div class="tags">
+                            <span>Java</span>
+                            <span>MySQL</span>
+                            <span>Rest API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="link-text">View Details <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+                <!-- Project 1 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="assets/images/portfolio/mobile/padangkos.png" alt="PadangKos">
+                        <div class="project-overlay">
+                            <a href="#" class="btn-icon"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="btn-icon"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>PadangKos</h3>
+                        <p>A boarding house marketplace in Padang City, connecting tenants with property owners through
+                            an intuitive search and promotion platform.</p>
+                        <div class="tags">
+                            <span>Java</span>
+                            <span>MySQL</span>
+                            <span>Rest API</span>
+                            <span>Google Maps API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="link-text">View Details <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="project-spacer"></div>
+
+            <!-- Web Projects -->
+            <h3 class="subsection-title"><i class="fas fa-laptop-code"></i>Desktop & Web Development</h3>
+            <div class="projects-grid">
+                <!-- Project 2 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="assets/images/portfolio/web/desk.png" alt="Inti Absensi Desktop">
+                        <div class="project-overlay">
+                            <a href="#" class="btn-icon"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="btn-icon"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Inti Absensi Desktop</h3>
+                        <p>A desktop-based employee attendance system leveraging facial recognition technology for
+                            secure and accurate time tracking at PT. Inti Sukses Sumatera.</p>
+                        <div class="tags">
+                            <span>Compose Multiplatform</span>
+                            <span>MySQL</span>
+                            <span>REST API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="link-text">View Details <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+                <!-- Project 1 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="assets/images/portfolio/web/server-monitor.png" alt="Backend Dashboard">
+                        <div class="project-overlay">
+                            <a href="#" class="btn-icon"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="btn-icon"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>ServerMonitor API</h3>
+                        <p>A robust backend system for real-time monitoring of server health and API endpoints service,
+                            presented through a clean and intuitive dashboard interface.</p>
+                        <div class="tags">
+                            <span>Laravel</span>
+                            <span>CodeIgniter</span>
+                            <span>MySQL</span>
+                            <span>REST API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="link-text">View Details <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+            </div>
         </div>
-      </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="section bg-alt">
+        <div class="container">
+            <h2 class="section-title">Certifications</h2>
+            <div class="certificates-grid">
+                <div class="cert-card" onclick="openModal('assets/certificates/cert1.png', 'Google Cloud Architect')">
+                    <img src="assets/certificates/cert1.png" alt="Google Cloud Certificate">
+                    <div class="cert-info">
+                        <h3>Google Cloud Architect</h3>
+                        <p>Google • 2024</p>
+                    </div>
+                </div>
+                <!-- Duplicate for demo -->
+                <div class="cert-card" onclick="openModal('assets/certificates/cert1.png', 'Android Expert')">
+                    <img src="assets/certificates/cert1.png" alt="Android Expert Certificate">
+                    <div class="cert-info">
+                        <h3>Android Expert</h3>
+                        <p>Dicoding • 2023</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">Technical <span class="highlight">Skills</span></h2>
+            <div class="skills-container">
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-mobile-alt"></i> Mobile Development</h3>
+                    <div class="skill-bars">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Kotlin & XML</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Jetpack Compose</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Compose Multiplatform</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-server"></i> Web & Backend</h3>
+                    <div class="skill-bars">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Laravel</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>CodeIgniter</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>MySQL / REST APIs</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section bg-alt">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2020 - Present</div>
+                    <div class="timeline-content">
+                        <h3>Fullstack Engineer</h3>
+                        <h4 class="company">PT Inti Sukses Sumatera</h4>
+                        <p>Designed and engineered comprehensive distributor application systems, handling the entire
+                            lifecycle from system architecture to implementation using <strong>Kotlin</strong>,
+                            <strong>CodeIgniter</strong>, and <strong>Laravel</strong>.
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2019 - 2020</div>
+                    <div class="timeline-content">
+                        <h3>Android Developer</h3>
+                        <h4 class="company">CV Mediatama Web Indonesia </h4>
+                        <p>Specialized in native Android development. Migrated legacy <strong>Java</strong> app to
+                            modern <strong>Kotlin</strong> UI toolkits.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2018</div>
+                    <div class="timeline-content">
+                        <h3>Web Developer</h3>
+                        <h4 class="company">PT Air Media Persada</h4>
+                        <p>Developed dynamic web portals using <strong>CodeIgniter</strong> and maintained legacy PHP
+                            systems.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Get In <span class="highlight">Touch</span></h2>
+            <div class="contact-grid">
+                <div class="contact-card email-card" onclick="copyToClipboard('rizkikurniawan@bytezilla.id')">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email Me</h3>
+                    <p id="email-text">rizkikurniawan@bytezilla.id</p>
+                    <span class="copy-hint">Click to copy</span>
+                </div>
+                <a href="https://wa.me/" target="_blank" class="contact-card">
+                    <i class="fab fa-whatsapp"></i>
+                    <h3>WhatsApp</h3>
+                    <p>Chat with me</p>
+                </a>
+                <a href="https://github.com/rizkikurniaa" target="_blank" class="contact-card">
+                    <i class="fab fa-github"></i>
+                    <h3>GitHub</h3>
+                    <p>Check my code</p>
+                </a>
+                <a href="https://linkedin.com/in/rizkikurniaa" target="_blank" class="contact-card">
+                    <i class="fab fa-linkedin"></i>
+                    <h3>LinkedIn</h3>
+                    <p>Connect professionally</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Rizki Kurniawan. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Modal for Certificates -->
+    <div id="imageModal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
     </div>
-  </div>
-  <!-- Akhir Jumbotron -->
 
-  <!-- Penggalaman Kerja -->
-  <section class="work pt-3 pb-4" id="work">
-    <div class="container pt-5 pb-5">
-      <div class="row">
-        <h3 class="mx-auto">PENGALAMAN KERJA</h3>
-      </div>
-      <div class="row mt-4">
-        <class class="col-6">
-          <div class="card p-3">
-            <div class="card-body">
-              <h5 class="card-title">Android Developer</h5>
-              <h6 class="card-subtitle mb-2 text-muted">
-                PT. Inti Sukses Sumatera
-              </h6>
-              <small class="card-subtitle mb-2 text-muted"><i class="fas fa-calendar"></i> 01 Oktober - 31 Desember 2020
-              </small>
-              <p class="text-justify mt-2">
-                Merancang dan membuat aplikasi android, mengelola database dan API, maintenance dan juga mengembangkan
-                aplikasi android perusahaan.
-              </p>
-            </div>
-          </div>
-        </class>
-        <class class="col-6">
-          <div class="card p-3">
-            <div class="card-body">
-              <h5 class="card-title">Android Developer</h5>
-              <h6 class="card-subtitle mb-2 text-muted">
-                CV. Mediatama Web Indonesia
-              </h6>
-              <small class="card-subtitle mb-2 text-muted"><i class="fas fa-calendar"></i> 11 Maret 2019 -
-                30 September 2020</small>
-              <p class="text-justify mt-2">
-                Merancang dan membuat aplikasi android mulai dari perancangan UI sampai aplikasi siap
-                untuk di publish di playstore.
-              </p>
-            </div>
-          </div>
-        </class>
-      </div>
-    </div>
-    </div>
-  </section>
-  <!-- Akhir Pengalaman Kerja -->
-
-  <!-- Tools -->
-  <section class="tools pt-3 pb-4">
-    <div class="container pt-5 pb-5">
-      <div class="row">
-        <h3 class="mx-auto">SKILLS</h3>
-      </div>
-      <div class="row mt-4 text-center">
-        <div class="col-12 col-lg-2 mb-5">
-          <img src="assets/img/tools/as.png" alt="" />
-        </div>
-        <div class="col-12 col-lg-2 mb-5">
-          <img src="assets/img/tools/java.gif" alt="" />
-        </div>
-        <div class="col-12 col-lg-2 mb-5">
-          <img src="assets/img/tools/kotlin.svg" alt="" />
-        </div>
-        <div class="col-12 col-lg-2 mb-5">
-          <img src="assets/img/tools/php.png" alt="" />
-        </div>
-        <div class="col-12 col-lg-2 mb-5">
-          <img src="assets/img/tools/json.png" alt="" />
-        </div>
-        <div class="col-12 col-lg-2 mb-5">
-          <img src="assets/img/tools/mysql.png" alt="" />
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Akhir Tools -->
-
-  <!-- Portfolio -->
-  <section class="portfolio pt-3 pb-4" id="portfolio">
-    <div class="container pt-5 pb-5">
-      <div class="row">
-        <h3 class="mx-auto">PORTFOLIO</h3>
-      </div>
-
-      <div class="row mt-4">
-        <div class="col-12 mb-4">
-          <div class="card-deck">
-
-            <div class="card">
-              <img src="assets/img/portfolio/daily-market.png" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title text-bold">Daily market ISS</h5>
-                <h6 class="card-subtitle mb-2 text-muted">
-                  PT Inti Sukses Sumatera </h6>
-                <p class="card-text">
-                  Outlet ISS merupakan aplikasi pemesanan barang oleh outlet kepada distributor PT Inti Sukses Sumatera.
-                </p>
-              </div>
-              <!--    <div class="card-footer">
-                  <a
-                    href="https://play.google.com/store/apps/details?id=com.mediatama.absensi"
-                    class="btn tombol-biru btn-block"
-                    target="_blank"
-                    >Playstore</a
-                  >
-                </div> -->
-            </div>
-
-            <div class="card">
-              <img src="assets/img/portfolio/iss-apps.png" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title text-bold">ISS Apps</h5>
-                <h6 class="card-subtitle mb-2 text-muted">
-                  PT Inti Sukses Sumatera </h6>
-                <p class="card-text">
-                  ISS Apps merupakan aplikasi penjualan barang dari distributor melalui sales di PT Inti Sukses
-                  Sumatera.
-                </p>
-              </div>
-              <!--  <div class="card-footer">
-                  <a
-                    href="https://play.google.com/store/apps/details?id=id.diata"
-                    class="btn tombol-biru btn-block"
-                    target="_blank"
-                    >Playstore</a
-                  >
-                </div> -->
-            </div>
-
-            <div class="card">
-              <img src="assets/img/portfolio/ayohijrah.png" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title text-bold">Ayo Hijrah</h5>
-                <h6 class="card-subtitle mb-2 text-muted">
-                  Ayo Hijrah Store </h6>
-                <p class="card-text">
-                  Ayo Hijrah adalah aplikasi e-commerce untuk penjualan pakaian muslim dan muslimah di toko Ayo Hijrah.
-                </p>
-              </div>
-              <!-- <div class="card-footer">
-                  <a
-                    href="https://play.google.com/store/apps/details?id=id.go.kemdikbud.edocbpcbsumbar"
-                    class="btn tombol-biru btn-block"
-                    target="_blank"
-                    >Playstore</a
-                  >
-                </div> -->
-            </div>
-
-
-          </div>
-        </div>
-      </div>
-
-      <div class="row mt-4">
-        <div class="col-12 mb-4">
-          <div class="card-deck">
-
-            <div class="card">
-              <img src="assets/img/portfolio/absensi.png" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title text-bold">Absensi Mediatama</h5>
-                <h6 class="card-subtitle mb-2 text-muted">
-                  CV. Mediatama Web Indonesia </h6>
-                <p class="card-text">
-                  Absensi Mediatama Merupakan aplikasi absensi karyawan Mediatama Web Indonesia.
-                </p>
-              </div>
-              <div class="card-footer">
-                <a href="https://play.google.com/store/apps/details?id=com.mediatama.absensi"
-                  class="btn tombol-biru btn-block" target="_blank">Playstore</a>
-              </div>
-            </div>
-
-            <div class="card">
-              <img src="assets/img/portfolio/diata1.png" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title text-bold">Diata : Point of Sale</h5>
-                <h6 class="card-subtitle mb-2 text-muted">
-                  CV. Mediatama Web Indonesia </h6>
-                <p class="card-text">
-                  Diata merupakan aplikasi point of sale yang akan memudahkan anda dalam mengelola bisnis anda langsung
-                  dari smartphone anda.
-                </p>
-              </div>
-              <div class="card-footer">
-                <a href="https://play.google.com/store/apps/details?id=id.diata" class="btn tombol-biru btn-block"
-                  target="_blank">Playstore</a>
-              </div>
-            </div>
-
-            <div class="card">
-              <img src="assets/img/portfolio/bpcb.png" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title text-bold">BPCB SUMBAR</h5>
-                <h6 class="card-subtitle mb-2 text-muted">
-                  Balai Pelestarian Cagar Budaya Sumatera Barat </h6>
-                <p class="card-text">
-                  BPCB SUMBAR adalah aplikasi untuk mempermudah pengguna mendapatkan informasi seputar objek cagar
-                  budaya di Sumatera Barat menggunakan kode QR.
-                </p>
-              </div>
-              <div class="card-footer">
-                <a href="https://play.google.com/store/apps/details?id=id.go.kemdikbud.edocbpcbsumbar"
-                  class="btn tombol-biru btn-block" target="_blank">Playstore</a>
-              </div>
-            </div>
-
-
-          </div>
-        </div>
-      </div>
-
-      <div class="row mt-4">
-        <div class="col-12 mb-4">
-          <div class="card-deck">
-
-            <div class="card">
-              <img src="assets/img/portfolio/alumniubh.png" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title text-bold">Alumni Hukum UBH</h5>
-                <h6 class="card-subtitle mb-2 text-muted">
-                  Ikatan Alumni Hukum Universitas Bung Hatta </h6>
-                <p class="card-text">
-                  Alumni Hukum UBH merupakan aplikasi Ikatan Alumni Fakultas Hukum Universitas Bung Hatta.
-                </p>
-              </div>
-              <div class="card-footer">
-                <a href="https://play.google.com/store/apps/details?id=com.ikatanalumnifhubh"
-                  class="btn tombol-biru btn-block" target="_blank">Playstore</a>
-              </div>
-            </div>
-
-            <div class="card">
-              <img src="assets/img/portfolio/pinzy.png" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title text-bold">Pinzy</h5>
-                <h6 class="card-subtitle mb-2 text-muted">
-                  Pinzy Accessories
-                </h6>
-                <p class="card-text">
-                  Pinzy merupakan aplikasi E-commerce untuk transaksi pembelian aksesoris smartphone pada distributor
-                  Pinzy di Sumatera Barat dan Bengkulu.
-                </p>
-              </div>
-              <div class="card-footer">
-                <a href="https://play.google.com/store/apps/details?id=com.mediatama.pinzystore"
-                  class="btn tombol-biru btn-block" target="_blank">Playstore</a>
-              </div>
-            </div>
-
-            <div class="card">
-              <img src="assets/img/portfolio/mediatama.png" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Mediatama Apps</h5>
-                <h6 class="card-subtitle mb-2 text-muted">
-                  CV. Mediatama Web Indonesia
-                </h6>
-                <p class="card-text">
-                  Mediatama Apps adalah aplikasi yang memudahkan untuk booking jadwal les serta konsultasi dengan
-                  konsultan CV Mediatama Web Indonesia.
-                </p>
-              </div>
-              <div class="card-footer">
-                <a href="https://play.google.com/store/apps/details?id=com.mediatama.mediatamaapps"
-                  class="btn tombol-biru btn-block" target="_blank">Playstore</a>
-              </div>
-            </div>
-
-
-          </div>
-        </div>
-      </div>
-
-      <div class="row mt-4">
-        <div class="col-12 mb-4">
-          <div class="card-deck">
-
-            <div class="card">
-              <img src="assets/img/portfolio/padangkos.png" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Padang Kos</h5>
-                <h6 class="card-subtitle mb-2 text-muted">
-                  Personal
-                </h6>
-                <p class="card-text">
-                  Padang Kos merupakan aplikasi pencarian kos dan juga fasilitas untuk pemilik kos dalam mempromosikan
-                  kos miliknya di Kota Padang.
-                </p>
-              </div>
-              <div class="card-footer">
-                <a href="https://play.google.com/store/apps/details?id=com.padangkos" class="btn tombol-biru btn-block"
-                  target="_blank">Playstore</a>
-              </div>
-            </div>
-
-            <div class="card" style="visibility: hidden;">
-
-            </div>
-
-            <div class="card" style="visibility: hidden;">
-
-            </div>
-
-
-
-          </div>
-        </div>
-      </div>
-
-
-
-    </div>
-  </section>
-  <!-- Akhir Portfolio -->
-
-  <!-- Sertifikat -->
-  <section class="sertifikat pt-3 pb-4">
-
-    <div class="row">
-      <h3 class="mx-auto" style="margin-top:25px">SERTIFIKAT</h3>
-    </div>
-    <div class="container pt-5 pb-5">
-      <div class="row mt-4">
-        <div class="col-12 col-lg-6 mb-5">
-          <img src="assets/img/sertifikat/dicoding/android-pemula.jpg" alt="Android Pemula" width="100%" />
-        </div>
-        <div class="col-12 col-lg-6 mb-5">
-          <img src="assets/img/sertifikat/dicoding/fundamental-android.jpg" alt="Android Fundamental" width="100%" />
-        </div>
-        <div class="col-12 col-lg-6 mb-5">
-          <img src="assets/img/sertifikat/dicoding/web-dasar.jpg" alt="Web Dasar" width="100%" />
-        </div>
-        <div class="col-12 col-lg-6 mb-5">
-          <img src="assets/img/sertifikat/dicoding/dart.jpg" alt="Memulai Pemrograman Dengan Dart" width="100%" />
-        </div>
-        <div class="col-12 col-lg-6 mb-5">
-          <img src="assets/img/sertifikat/dicoding/flutter-pemula.jpg" alt="Memulai Pemrograman Dengan Flutter" width="100%" />
-        </div>
-        <div class="col-12 col-lg-6 mb-5">
-          <img src="assets/img/sertifikat/bwa/flutter-for-designer.jpg" alt="Flutter for designer" width="100%" />
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Akhir Sertifikat -->
-
-  <!-- Social Media -->
-  <section class="social pt-3 pb-4">
-    <div class="container pt-5 pb-5">
-      <div class="row mt-4 text-center">
-        <div class="col-12 col-lg-3 mb-5 animated zoomIn delay-2s">
-          <a href="https://web.facebook.com/rizki.deathknight" target="_blank"><i class="fab fa-facebook fa-5x"></i></a>
-        </div>
-        <div class="col-12 col-lg-3 mb-5 animated zoomIn delay-2s">
-          <a href="https://www.instagram.com/rizki_kurniaa/" target="_blank"><i class="fab fa-instagram fa-5x"></i></a>
-        </div>
-        <div class="col-12 col-lg-3 mb-5 animated zoomIn delay-2s">
-          <a href="https://www.linkedin.com/in/rizkikurniaa/" target="_blank"><i class="fab fa-linkedin fa-5x"></i></a>
-        </div>
-        <div class="col-12 col-lg-3 mb-5 animated zoomIn delay-2s">
-          <a href="https://github.com/rizkikurniaa" target="_blank"><i class="fab fa-github fa-5x"></i></a>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Akhir Social Media -->
-
-  <!-- Footer -->
-  <footer class="border-top p-3">
-    <div class="container">
-      <div class="row mt-3 justify-content-between">
-        <div class="col-12 animated flipInX delay-2s">
-          <p align="center">
-            &copy; Template by <a href="https://github.com/ahmadfajri">Ahmad Fajri</a>
-          </p>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <!-- Akhir Footer -->
-
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS, then Font Awesome JS -->
-  <script src="assets/libs/jquery/jquery-3.4.1.min.js"></script>
-  <script src="assets/libs/popper/popper.min.js"></script>
-  <script src="assets/libs/bootstrap/js/bootstrap.min.js"></script>
-  <script src="assets/libs/fontawesome/js/all.js"></script>
-  <script src="assets/js/script.js"></script>
+    <!-- Scripts -->
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
