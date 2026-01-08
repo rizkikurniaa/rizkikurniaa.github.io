@@ -1039,3 +1039,82 @@ footer p {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* === PROJECT MODAL === */
+.project-modal-content {
+    background-color: var(--surface-color);
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.project-modal-img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-bottom: 2px solid var(--accent-color);
+}
+
+.project-modal-info {
+    padding: 30px;
+}
+
+.project-modal-info h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: var(--text-primary);
+}
+
+.project-modal-info p {
+    color: var(--text-secondary);
+    margin-bottom: 25px;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.project-close {
+    z-index: 10;
+    top: 15px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    line-height: 1;
+    color: white;
+    backdrop-filter: blur(5px);
+}
+
+.project-close:hover {
+    background: var(--accent-color);
+    color: white;
+}
+
+.project-modal-info .tags {
+    margin-bottom: 25px;
+}
+
+.project-modal-info .tags span {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    background: rgba(59, 130, 246, 0.1);
+    color: var(--accent-color);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+@media (max-width: 768px) {
+    .project-modal-img {
+        height: 250px;
+    }
+    
+    .project-modal-info h3 {
+        font-size: 1.5rem;
+    }
+}

@@ -115,7 +115,62 @@ window.onclick = function (event) {
     if (event.target == modal) {
         modal.style.display = 'none';
     }
+    const pModal = document.getElementById('projectModal');
+    if (event.target == pModal) {
+        pModal.style.display = 'none';
+    }
 }
+
+// === PROJECT DETAILS MODAL ===
+const projectModal = document.getElementById('projectModal');
+const projectModalImg = document.getElementById('projectModalImage');
+const projectModalTitle = document.getElementById('projectModalTitle');
+const projectModalDesc = document.getElementById('projectModalDescription');
+const projectModalTags = document.getElementById('projectModalTags');
+const projectModalLinks = document.getElementById('projectModalLinks');
+const projectCloseBtn = document.querySelector('.project-close');
+
+if (projectCloseBtn) {
+    projectCloseBtn.onclick = function() {
+        projectModal.style.display = 'none';
+    }
+}
+
+document.querySelectorAll('.project-card .link-text').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const card = btn.closest('.project-card');
+        const img = card.querySelector('.project-image img').src;
+        const title = card.querySelector('.project-info h3').textContent;
+        const desc = card.querySelector('.project-info p').innerHTML;
+        const tags = card.querySelector('.tags').innerHTML;
+
+        // Get links from overlay
+        const overlayLinks = card.querySelectorAll('.project-overlay a');
+        let linksHtml = '';
+        overlayLinks.forEach(link => {
+            const iconHTML = link.innerHTML;
+            const href = link.getAttribute('href');
+            let label = 'Visit';
+            
+            if (iconHTML.includes('github')) label = 'Source Code';
+            else if (iconHTML.includes('external-link')) label = 'Live Demo';
+            else if (iconHTML.includes('google-play')) label = 'Play Store';
+
+            if (href && href !== '#') {
+                 linksHtml += `<a href="${href}" target="_blank" class="btn btn-primary" style="margin-right: 15px; margin-bottom: 10px; display: inline-flex; align-items: center; gap: 8px; text-decoration: none;">${label} ${iconHTML}</a>`;
+            }
+        });
+
+        projectModalImg.src = img;
+        projectModalTitle.textContent = title;
+        projectModalDesc.innerHTML = desc; // Use innerHTML to preserve tags
+        projectModalTags.innerHTML = tags;
+        projectModalLinks.innerHTML = linksHtml;
+
+        projectModal.style.display = 'block';
+    });
+});
 
 // === CLIPBOARD ===
 window.copyToClipboard = function (text) {
