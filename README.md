@@ -1,4 +1,4 @@
-# Rizki Kurniawan's Portfolio Website :)
+# Rizki Kurniawan's Portfolio Website
 
 ![Portfolio Preview](assets/images/general/preview.png)
 
