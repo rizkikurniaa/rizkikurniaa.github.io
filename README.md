@@ -70,7 +70,6 @@ Since this is a static website, you don't need a backend server to run it.
 
 Feel free to reach out if you have any questions or want to collaborate!
 
-- **Email:** [rizkikurniawan@bytezilla.id](mailto:)
 - **LinkedIn:** [Rizki Kurniawan](https://linkedin.com/in/rizkikurniaa)
 - **GitHub:** [rizkikurniaa](https://github.com/rizkikurniaa)
 
